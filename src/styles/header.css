@@ -5,8 +5,9 @@
     width: 100%;
     height: 14%;
     border-bottom: 1px solid grey;
-    backdrop-filter: saturate(250%) blur(12px);
-    -webkit-backdrop-filter: saturate(250%) blur(12px);
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    backdrop-filter: saturate(400%) blur(4px);
+    -webkit-backdrop-filter: saturate(400%) blur(4px);
     background-color: rgba(255,255,255,0.65);
 }
 
@@ -18,6 +19,16 @@
 .head .retornar-pagina img {
     height: 17%;
     width: 100%;
+    transition: 0.1s;
+}
+
+.head .retornar-pagina img:hover,
+.head .retornar-pagina img:focus {
+    transform: scale(0.98);
+}
+
+.head .retornar-pagina img:active {
+    transform: scale(0.94);
 }
 
 .head .retornar-pagina a {
@@ -39,4 +50,22 @@
     align-items: center;
     margin-right: 2em;
     width: 20%;
+}
+
+.header-contato button {
+    border: none;
+    margin: 0;
+    padding: 0.8em;
+    color: rgba(98, 98, 98, 0.98);
+    overflow: visible;
+    background: transparent;
+    outline: none;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    transition: 0.05s;
+}
+
+.header-contato button:hover,
+.header-contato button:focus {
+    color: black;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
 }

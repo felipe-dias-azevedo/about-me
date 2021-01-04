@@ -1,5 +1,13 @@
+body {
+    background: url(../images/background.jpg) no-repeat;
+    background-size: cover;
+}
+
 #main-about {
     height: 100vh;
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
 }
 
 .corpo-exibicao {

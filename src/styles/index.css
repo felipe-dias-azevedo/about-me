@@ -1,5 +1,13 @@
+body {
+    background: url(../images/background.jpg) no-repeat;
+    background-size: cover;
+}
+
 #main-index {
     height: 100vh;
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
 }
 
 .corpo {
@@ -8,6 +16,7 @@
     justify-content: center;
     flex-direction: row;
     height: 86%;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
 .corpo img {
@@ -16,6 +25,7 @@
     border-radius: 50%;
     margin: 4%;
     border: #181818 2px solid;
+    box-shadow: 0 0 0.8em rgba(0, 0, 0, 0.35);
 }
 
 .corpo .corpo-info {
@@ -29,7 +39,7 @@
 }
 
 .corpo .corpo-info p {
-    line-height: 1.2em;
+    line-height: 1.4em;
     text-align: justify;
 }
 
@@ -41,13 +51,15 @@
     text-decoration: none;
     font-size: 1.05em;
     line-height: 1.6;
-    font-weight: 400;
     margin-top: 1em;
-    background-color: #0070c9;
-    background: linear-gradient(#42a1ec,#0070c9);
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-    border: 1px solid #07c;
-    border-radius: 8px;
+    /* background-color: #0070c9;
+    background: linear-gradient(#42a1ec,#0070c9); */
+    background-color: #366abe;
+    background: linear-gradient(#549ae0,#366abe);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    /* border: 2px solid #07c; */
+    border: 2px solid rgb(47, 89, 173);
+    border-radius: 16px;
     color: #fff;
     cursor: pointer;
     display: inline-block;
@@ -56,11 +68,18 @@
     text-align: center;
     white-space: nowrap;
     outline: 0;
+    transition: 0.05s;
 }
 
-.corpo a:hover {
-    background-color: #147bcd;
-    background: linear-gradient(#51a9ee,#147bcd);
-    border-color: #1482d0;
+.corpo a:hover,
+.corpo a:focus {
+    background-color: #3e75ce;
+    background: linear-gradient(#6eabe9,#3e75ce);
+    border-color: rgb(63, 108, 199);
     text-decoration: none;
+}
+
+.corpo a:active {
+    border: 2px solid rgb(26, 62, 134);
+    transform: scale(0.98);
 }

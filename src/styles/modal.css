@@ -6,15 +6,16 @@
     height: 100vh;
     width: 100vw;
     z-index: 1;
-    backdrop-filter: saturate(400%) blur(10px);
-    -webkit-backdrop-filter: saturate(400%) blur(10px);
+    backdrop-filter: saturate(50%) blur(8px);
+    -webkit-backdrop-filter: saturate(50%) blur(8px);
     background-color: rgba(4,4,4,0.75);
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
     align-items: center;
     justify-content: center;
 }
 
 #main-modal {
-    height: 36%;
+    height: 45%;
     width: 80%;
     display: flex;
     justify-content: space-around;
@@ -23,25 +24,74 @@
 }
 
 #main-modal .media {
-    width: 35%;
+    width: 44%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
 }
 
+#main-modal .media a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    outline: none;
+}
+
+#main-modal .media section {
+    border-radius: 50%;
+    height: 5em;
+    width: 5em;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+    border: 2px solid black;
+    transition: 0.05s;
+}
+
+#main-modal .media section:hover,
+#main-modal .media section:focus {
+    border: 2px solid gray;
+    box-shadow: 0 0 8px rgba(120, 120, 120, 0.9);
+}
+
+#main-modal .media img {
+    height: 3em;
+    width: 3em;
+}
+
+#main-modal .media h3 {   
+    font-size: 1.15em;
+    font-weight: 300;
+    margin: 0.5em;
+}
+
 #close-modal {
     position: absolute;
+    height: 2.3em;
+    width: 2.3em;
     right: 2.4em;
     top: 1.8em;
     border: none;
     margin: 0;
     padding: 0;
-    width: auto;
     overflow: visible;
     background: transparent;
     outline: none;
     cursor: pointer;
+    transition: 0.05s;
+}
+
+#close-modal:hover,
+#close-modal:focus {
+    transform: scale(0.96);
+}
+
+#close-modal:active {
+    transform: scale(0.90);
 }
 
 #close-modal img {
@@ -53,16 +103,16 @@
     Animação do modal
 */
 .animate {
-    -webkit-animation: animatezoom 0.15s;
-    animation: animatezoom 0.15s
+    -webkit-animation: animatezoom 0.1s;
+    animation: animatezoom 0.1s
 }
 
 @-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
+    from {-webkit-transform: scale(0.85)} 
     to {-webkit-transform: scale(1)}
     }
 
 @keyframes animatezoom {
-    from {transform: scale(0)} 
+    from {transform: scale(0.85)} 
     to {transform: scale(1)}
 }
