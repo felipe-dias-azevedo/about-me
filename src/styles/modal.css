@@ -1,0 +1,68 @@
+
+#modal {
+    display: none;
+    color: #f0f0f0;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    backdrop-filter: saturate(400%) blur(10px);
+    -webkit-backdrop-filter: saturate(400%) blur(10px);
+    background-color: rgba(4,4,4,0.75);
+    align-items: center;
+    justify-content: center;
+}
+
+#main-modal {
+    height: 36%;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+#main-modal .media {
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+#close-modal {
+    position: absolute;
+    right: 2.4em;
+    top: 1.8em;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+#close-modal img {
+    height: 2em;
+    width: 2em;
+}
+
+/* 
+    Animação do modal
+*/
+.animate {
+    -webkit-animation: animatezoom 0.15s;
+    animation: animatezoom 0.15s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+    }
+
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}

@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #181818;
+    background: #f0f0f0
+}
+
+body, input, button, textarea {
+    font-weight: 300;
+    font-size: 18px;
+    font-family: 'Mukta', sans-serif;
+}
+
+h1 {
+    font-size: 1.9em;
+}
+
+a, button {
+    cursor: pointer;
+}

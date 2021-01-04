@@ -1,0 +1,28 @@
+#main-about {
+    height: 100vh;
+}
+
+.corpo-exibicao {
+    height: 86%;
+    padding-top: 4em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.projetos-exibicao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+}
+
+.conhecimentos-exibicao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+}
