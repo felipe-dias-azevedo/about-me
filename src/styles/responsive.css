@@ -1,0 +1,13 @@
+/* até 820px de altura */
+@media (max-height: 820px) {
+    body, input, button, textarea {
+        font-size: 18px;
+    }
+}
+
+/* até 870px de largura */
+@media (max-width: 870px) {
+    body {
+        font-size: 18px;
+    }
+}

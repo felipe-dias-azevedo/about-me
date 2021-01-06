@@ -3,14 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/responsive.css">
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/about.css">
     <link rel="stylesheet" href="../styles/modal.css">
+    <link rel="stylesheet" href="../styles/modal-details.css">
+    <link rel="stylesheet" href="../styles/card.css">
     <title>Sobre o Felipe</title>
     <script src="../scripts.js"></script>
 </head>
 <body>
+    <div id="modal-details" class="animate">
+        <button id="close-modal" onclick="closeDetails()">
+            <img src="../images/close.svg" alt="">
+        </button>
+        <div id="main-modal-details">
+            <h1 id="modal-details-title">
+
+            </h1>
+            <div class="modal-details-box">
+                <p id="modal-details-text"></p>
+            </div>
+        </div>
+    </div>
     <div id="modal" class="animate">
         <button id="close-modal" onclick="showModal()">
             <img src="../images/close.svg" alt="">
@@ -24,7 +42,7 @@
                     </section>
                     <h3>E-mail</h3>
                 </a>
-                <a href="">
+                <a href="https://www.linkedin.com/in/felipe-azevedo-4b71171a8/" target="_blank">
                     <section>
                         <img src="../images/linkedin.svg" alt="Linkedin">
                     </section>
@@ -56,6 +74,9 @@
         <div class="corpo-exibicao">
             <div class="projetos-exibicao">
                 <h1>Projetos Realizados:</h1>
+                <div id="main-projetos">
+                    
+                </div>
             </div>
             <div class="conhecimentos-exibicao">
                 <h1>Conhecimentos:</h1>
@@ -64,3 +85,6 @@
     </div>
 </body>
 </html>
+<script>
+    loadProjects();
+</script>

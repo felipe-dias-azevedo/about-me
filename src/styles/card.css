@@ -1,0 +1,119 @@
+.projeto {
+    height: auto;
+    padding-top: 0.6em;
+    margin-bottom: 0.2em;
+    margin-left: 0.4em;
+    margin-right: 0.8em;
+}
+
+.cartao {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+  
+.cartao-traseira {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    border: 2px solid #c4c4c4;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+
+    height: 97.05%;
+    width: 100%;
+    opacity: 0;
+    border-radius: 16px;
+
+    transition: 0.3s;
+}
+
+.cartao figure img {
+    height: auto;
+    width: 100%;
+    /* object-fit: cover;
+    object-position: left bottom; */
+    border-radius: 16px;
+    border: 2px grey solid;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.projeto:hover .cartao-traseira {
+    opacity: 1;
+}
+
+.projeto:hover .cartao figure img {
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+.descricao-projeto {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    margin-top: 1.4em;
+}
+
+.descricao-projeto section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.descricao-projeto p {
+    margin-top: 0.3em;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.descricao-projeto a,
+.descricao-projeto button {
+    margin: 0;
+    border: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    outline: none;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.descricao-projeto section {
+    height: 4.5em;
+    width: 4.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px grey solid;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0.05em;
+    overflow: visible;
+    background: #fcfcfc;
+    outline: none;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    transition: 0.1s;
+}
+
+.descricao-projeto img {
+    height: 62%;
+    width: 62%;
+}
+
+.descricao-projeto section:hover,
+.descricao-projeto section:focus {
+    background-color: #fff;
+    border: 2px solid #c4c4c4;
+    box-shadow: 0 0 10px rgba(188, 188, 188, 0.9);
+}

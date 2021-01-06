@@ -48,14 +48,16 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-    border: 2px solid black;
+    border: 3px solid black;
     transition: 0.05s;
 }
 
 #main-modal .media section:hover,
 #main-modal .media section:focus {
-    border: 2px solid gray;
-    box-shadow: 0 0 8px rgba(120, 120, 120, 0.9);
+    background-color: #fcfcfc;
+    border: 3px solid gray;
+    /* border: 2px solid #07c; */
+    box-shadow: 0 0 10px rgba(120, 120, 120, 0.9);
 }
 
 #main-modal .media img {

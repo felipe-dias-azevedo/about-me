@@ -18,13 +18,14 @@ body {
 }
 
 body, input, button, textarea {
+    text-align: center;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 22px;
     font-family: 'Mukta', sans-serif;
 }
 
 h1 {
-    font-size: 1.9em;
+    font-size: 2em;
     font-weight: 600;
 }
 
