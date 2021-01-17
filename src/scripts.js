@@ -14,6 +14,12 @@ function showModal() {
 }
 
 
+function closeDetails() {
+    var modal_details = document.getElementById("modal-details");
+    modal_details.style.display = 'none';
+}
+
+
 function changeScreen() {
     // var bodyProp = document.getElementsByTagName("BODY")[0];
     // bodyProp.innerHTML = ""
@@ -21,10 +27,11 @@ function changeScreen() {
 
 
 function loadProjects() {
+    var path_to_source_proj = "../images/projects/";
     var source_proj = [
-        "../images/projects/calculator-java.png",
-        "../images/projects/website-game.png",
-        "../images/projects/web-crosswords.png",
+        "calculator-java.png",
+        "website-game.png",
+        "web-crosswords.png",
     ];
     var description_proj = [
         "Calculadora em Java",
@@ -68,7 +75,8 @@ function loadProjects() {
     var localeInfo = getNeededLocale(0);
 
     for (let i = 0; i < source_proj.length; i++) {
-        out_projects += defineProject(i, source_proj[i], description_proj[i], code_proj[i], localeInfo);
+        var path_source_proj = path_to_source_proj + source_proj[i];
+        out_projects += defineProject(i, path_source_proj, description_proj[i], code_proj[i], localeInfo);
     }
 
     var projects = document.getElementById("main-projetos");
@@ -97,22 +105,60 @@ function getProjectDetails(id_project, title_project) {
 
 
 function loadTechnologies() {
+    var path_to_source_tech = "../images/techs/";
+    var source_tech = [
+        "python-icon.png",
+        "java-icon.png",
+        "typescript-icon.png",
+        "javascript-icon.png",
+        "html-icon.png",
+        "css-icon.png",
+        "nodejs-icon.png",
+        "react-icon.png",
+        "react-native-icon.png",
+        "r-icon.png",
+        "c-icon.png",
+        "cpp-icon.png",
+        "mysql-icon.png",
+        "mssql-icon.png",
+        "docker-icon.png",
+        "linux-icon.png"
+    ];
+    var description_tech = [
+        "Python",
+        "Java",
+        "Typescript",
+        "Javascript",
+        "HTML",
+        "CSS",
+        "Node.JS",
+        "React",
+        "React Native",
+        "R",
+        "C",
+        "C++",
+        "MySQL",
+        "MSSQL",
+        "Docker",
+        "Linux"
+    ];
     var insertTechs = "";
 
-    function defineTech() {
+    function defineTech(description, img_source) {
         var technology = `<div class="tecnologia">
                             <div class="cartao">
                                 <figure>
-                                    <img src="../images/techs/python-icon.png" alt="python-icon">
+                                    <img src="${img_source}" alt="${description}">
                                 </figure>
                             </div>
-                            <h3>Python</h3>
+                            <h3>${description}</h3>
                         </div>`;
         return technology;
     }
 
-    for (let i = 0; i < 24; i++) {
-        insertTechs += defineTech();
+    for (let i = 0; i < source_tech.length; i++) {
+        var path_source_tech = path_to_source_tech + source_tech[i];
+        insertTechs += defineTech(description_tech[i], path_source_tech);
     }
     document.getElementById("main-tecnologias").innerHTML = insertTechs;
 }
@@ -135,12 +181,6 @@ function getNeededLocale(source) {
             break;
     }
     return info;
-}
-
-
-function closeDetails() {
-    var modal_details = document.getElementById("modal-details");
-    modal_details.style.display = 'none';
 }
 
 

@@ -26,7 +26,7 @@ function loadLocales() {
 function getLocaleIndex() {
     var browserLanguage = navigator.language || navigator.userLanguage;
 
-    if (browserLanguage == "pt-BR") {
+    if (browserLanguage == "pt-BR" || browserLanguage == "pt") {
         var indexLocale = 0;
     } else {
         var indexLocale = 1;
