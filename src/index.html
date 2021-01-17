@@ -10,22 +10,23 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/index.css">
     <title>Site Felipe</title>
+    <script src="loadLocales.js"></script>
     <script src="scripts.js"></script>
 </head>
 <body>
     <div id="main-index">
         <div class="head">
             <div class="header">
-                <h1>Sobre o Felipe</h1>
+                <h1 id="indexTitle">Sobre o Felipe</h1>
             </div>
         </div>
         <div class="corpo">
             <div class="corpo-info">
                 <h2>Felipe Dias Alves de Azevedo</h2>
-                <p>
+                <p id="indexSubtitle">
                     Um estudante de Ciência da Computação apaixonado por programação web, mobile e desktop, assim como diversos assuntos envolvendo computação.
                 </p>
-                <a href="pages/about.html">Saiba Mais</a>
+                <a href="pages/about.html" id="indexInfo">Saiba Mais</a>
             </div>
             
             <img src="images/felipe.jpg" alt="Foto de Felipe">
@@ -33,3 +34,6 @@
     </div>
 </body>
 </html>
+<script>
+    loadLocales();
+</script>

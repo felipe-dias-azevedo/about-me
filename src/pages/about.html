@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../styles/card.css">
     <title>Sobre o Felipe</title>
     <script src="../scripts.js"></script>
+    <script src="../loadLocales.js"></script>
 </head>
 <body>
     <div id="modal-details" class="animate">
@@ -34,7 +35,7 @@
             <img src="../images/close.svg" alt="">
         </button>
         <div id="main-modal">
-            <h1>Meios de contato</h1>
+            <h1 id="contactTitle">Meios de contato</h1>
             <div class="media">
                 <a href="">
                     <section>
@@ -52,7 +53,7 @@
                     <section>
                         <img src="../images/phone.svg" alt="Telefone">
                     </section>
-                    <h3>Telefone</h3>
+                    <h3 id="telephone">Telefone</h3>
                 </a>
             </div>
         </div>
@@ -65,21 +66,24 @@
                 </a>
             </div>
             <div class="header-exibicao">
-                <h1>Sobre o Felipe</h1>
+                <h1 id="aboutTitle">Sobre o Felipe</h1>
             </div>
             <div class="header-contato">
-                <button onclick="showModal()">Entrar em Contato</button>
+                <button onclick="showModal()" id="beginContact">Entrar em Contato</button>
             </div>
         </div>
         <div class="corpo-exibicao">
             <div class="projetos-exibicao">
-                <h1>Projetos Realizados:</h1>
+                <h1 id="projectsTitle">Projetos Realizados:</h1>
                 <div id="main-projetos">
                     
                 </div>
             </div>
             <div class="conhecimentos-exibicao">
-                <h1>Conhecimentos:</h1>
+                <h1 id="knowledgesTitle">Conhecimentos:</h1>
+                <div id="main-tecnologias">
+                    
+                </div>
             </div>
         </div>
     </div>
@@ -87,4 +91,6 @@
 </html>
 <script>
     loadProjects();
+    loadTechnologies();
+    loadLocales();
 </script>

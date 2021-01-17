@@ -38,7 +38,10 @@ function loadProjects() {
     ];
     var out_projects = "";
 
-    function defineProject(id, img_source, description, source_code) {
+    function defineProject(id, img_source, description, source_code, localeInfo) {
+        var details = localeInfo.details;
+        var access = localeInfo.access;
+
         var project = `<div class="projeto">
                             <div class="cartao">
                                 <figure>
@@ -49,11 +52,11 @@ function loadProjects() {
                                     <div class="descricao-projeto">
                                         <a href="${source_code}" target="_blank">
                                             <section><img src="../images/web.svg" alt="web"></section>
-                                            <p>Acessar</p>
+                                            <p>${access}</p>
                                         </a>
                                         <button onclick="getProjectDetails(${id},'${description}')">
                                             <section><img src="../images/magnifier.svg" alt="lupa de aumento"></section>
-                                            <p>Mais detalhes</p>
+                                            <p>${details}</p>
                                         </button>
                                     </div>
                                 </div>
@@ -62,8 +65,10 @@ function loadProjects() {
         return project;
     }
 
+    var localeInfo = getNeededLocale(0);
+
     for (let i = 0; i < source_proj.length; i++) {
-        out_projects += defineProject(i, source_proj[i], description_proj[i], code_proj[i]);
+        out_projects += defineProject(i, source_proj[i], description_proj[i], code_proj[i], localeInfo);
     }
 
     var projects = document.getElementById("main-projetos");
@@ -82,11 +87,56 @@ function getProjectDetails(id_project, title_project) {
         "Palavras Cruzadas Web sobre Arquitetura de Computadores",
     ];
 
+    var projectDetailsLocale = getNeededLocale(1).title;
+
     var modal_details_title = document.getElementById("modal-details-title");
     var modal_details_text = document.getElementById("modal-details-text");
-    modal_details_title.innerHTML = `Detalhes do Projeto: <br><div class="modal-title">${title_project}</div>`;
+    modal_details_title.innerHTML = `${projectDetailsLocale}: <br><div class="modal-title">${title_project}</div>`;
     modal_details_text.innerHTML = details_proj[id_project];
 }
+
+
+function loadTechnologies() {
+    var insertTechs = "";
+
+    function defineTech() {
+        var technology = `<div class="tecnologia">
+                            <div class="cartao">
+                                <figure>
+                                    <img src="../images/techs/python-icon.png" alt="python-icon">
+                                </figure>
+                            </div>
+                            <h3>Python</h3>
+                        </div>`;
+        return technology;
+    }
+
+    for (let i = 0; i < 24; i++) {
+        insertTechs += defineTech();
+    }
+    document.getElementById("main-tecnologias").innerHTML = insertTechs;
+}
+
+
+function getNeededLocale(source) {
+    var locale = getLocales();
+    var indexLocale = getLocaleIndex();
+    switch (source) {
+        case 0:
+            info = {
+                "details": locale[indexLocale].about.project.projectDetails,
+                "access": locale[indexLocale].about.project.projectAccess
+            }
+            break;
+        case 1:
+            info = {
+                "title": locale[indexLocale].about.project.projectTitle
+            }
+            break;
+    }
+    return info;
+}
+
 
 function closeDetails() {
     var modal_details = document.getElementById("modal-details");
