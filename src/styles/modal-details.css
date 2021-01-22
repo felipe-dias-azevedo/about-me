@@ -7,9 +7,9 @@
     z-index: 300;
     justify-content: center;
     align-items: center;
-    backdrop-filter: saturate(50%) blur(8px);
+    background-color: rgba(15, 15, 15, 0.94);
+    backdrop-filter: saturate(75%) blur(6px);
     -webkit-backdrop-filter: saturate(50%) blur(8px);
-    background-color: rgba(4,4,4,0.75);
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
     align-items: center;
     justify-content: center;

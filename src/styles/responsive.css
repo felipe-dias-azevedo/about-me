@@ -1,13 +1,175 @@
-/* até 820px de altura */
-@media (max-height: 820px) {
+
+/* até 870px de largura */
+@media (max-width: 1020px) {
     body, input, button, textarea {
         font-size: 18px;
     }
+
+    .descricao-projeto section {
+        height: 4em;
+        width: 4em;
+    }
 }
 
-/* até 870px de largura */
-@media (max-width: 870px) {
-    body {
-        font-size: 18px;
+/* até 550px de largura */
+/* MOBILE */
+@media (max-width: 600px) {
+    body, input, button, textarea {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.7em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    #main-index {
+        height: 100vh;
+    }
+
+    #main-index .head {
+        height: 10%;
+    }
+
+    .corpo {
+        /* height: auto; */
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        padding-top: 4em;
+    }
+
+    .corpo img {
+        height: 12em;
+        width: 12em;
+    }
+
+    .corpo .corpo-info {
+        width: 80%;
+    }
+
+    #main-about {
+        height: auto;
+        background-color: rgba(255,255,255,0.9);
+        backdrop-filter: saturate(600%) blur(6px);
+        -webkit-backdrop-filter: saturate(300%) blur(12px);
+    }
+
+    .corpo-exibicao {
+        height: auto;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .projetos-exibicao {
+        width: 75%;
+        height: auto;
+    }
+
+    .conhecimentos-exibicao {
+        width: 75%;
+        height: auto;
+    }
+
+    .head .retornar-pagina a {
+        width: 36%;
+    }
+
+    #main-projetos {
+        overflow: hidden;
+    }
+
+    .head .header-contato {
+        margin-right: 0;
+        width: 30%;
+    }
+
+    .head .header-exibicao h1,
+    .head .header-contato button {
+        line-height: 1.2em;
+    }
+
+    .descricao-projeto {
+        margin-top: 0.4em;
+    }
+
+    /* MODAL */
+
+    #close-modal {
+        height: 2.8em;
+        width: 2.8em;
+    }
+
+    #close-modal img {
+        height: 2.5em;
+        width: 2.5em;
+    }
+
+    #main-modal {
+        height: 53%;
+        width: 70%;
+    }
+
+    #main-modal .media {
+        width: 85%;
+        flex-direction: column-reverse;
+    }
+
+    #contactTitle {
+        font-size: 1.9em;
+        font-weight: 600;
+    }
+
+    /* MODAL-DETAILS */
+
+    #main-modal-details {
+        width: 95%;
+    }
+
+    .modal-details-box {
+        height: 75%;
+        width: 80%;
+        margin-top: 1.2em;
+    }
+
+    #modal-details-title {
+        line-height: 1.8em;
+    }
+
+    .modal-title {
+        font-size: 0.95em;
+        font-weight: 300;
+    }
+}
+
+/* até 820px de altura */
+@media (max-height: 650px) {
+    .head {
+        height: 15%;
+    }
+
+    .corpo {
+        height: 85%;
+    }
+
+    .corpo-exibicao {
+        height: 85%;
+        padding-top: 15px;
+        padding-bottom: 0.8em;
+    }
+
+    #main-modal {
+        height: 70%;
+    }
+
+    .corpo {
+        padding-top: 1.2em;
     }
 }

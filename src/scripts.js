@@ -55,7 +55,7 @@ function loadProjects() {
                                     <img src="${img_source}" alt="${description}">
                                 </figure>
                                 <div class="cartao-traseira">
-                                    <h2>${description}</h2>
+                                    <h3>${description}</h3>
                                     <div class="descricao-projeto">
                                         <a href="${source_code}" target="_blank">
                                             <section><img src="../images/web.svg" alt="web"></section>

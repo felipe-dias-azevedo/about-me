@@ -4,10 +4,10 @@
 
 .projeto {
     height: auto;
-    padding-top: 0.6em;
+    /* padding-top: 0.6em; */
     margin-bottom: 0.2em;
     margin-left: 0.4em;
-    margin-right: 0.8em;
+    margin-right: 18px;
 }
 
 .projeto .cartao {
@@ -28,16 +28,20 @@
     flex-direction: column;
 
     border: 2px solid #c4c4c4;
-    background-color: rgba(255, 255, 255, 0.6);
-    backdrop-filter: saturate(180%) blur(12px);
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: saturate(500%) blur(8px);
     -webkit-backdrop-filter: saturate(180%) blur(12px);
 
-    height: 97.05%;
+    height: 96.95%;
     width: 100%;
     opacity: 0;
     border-radius: 16px;
 
     transition: 0.3s;
+}
+
+.cartao-traseira h3 {
+    font-weight: 400;
 }
 
 .projeto .cartao figure img {
@@ -56,7 +60,7 @@
 }
 
 .projeto:hover .cartao figure img {
-    box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .descricao-projeto {
@@ -149,11 +153,11 @@
     border-radius: 50%;
     /* background-color: rgba(255, 255, 255, 0.4); */
     border: 3px solid #232323;
-    background-color: rgba(188, 188, 188, 0.6);
-    backdrop-filter: saturate(180%) blur(12px);
-    -webkit-backdrop-filter: saturate(180%) blur(12px);
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-    transition: 0.1s;
+    background-color: rgba(158, 158, 158, 0.6);
+    backdrop-filter: saturate(500%) blur(1px);
+    -webkit-backdrop-filter: saturate(300%) blur(1px);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    transition: 0.05s;
 }
 
 .tecnologia figure {
@@ -166,9 +170,9 @@
 
 .tecnologia .cartao:hover,
 .tecnologia .cartao:focus {
-    background-color: rgba(240, 240, 240, 0.8);
+    background-color: rgba(245, 245, 245, 0.8);
     border: 3px solid #c3c3c3;
-    box-shadow: 0 0 10px rgba(188, 188, 188, 1);
+    box-shadow: 0 0 6px rgba(188, 188, 188, 1);
 }
 
 .tecnologia .cartao:hover img,
@@ -183,9 +187,9 @@
     justify-content: center;
     height: 66%;
     width: 66%;
-    filter: drop-shadow(1px 1px 1.2em rgba(0,0,0,0.55));
-    -webkit-filter: drop-shadow(1px 1px 1.2em rgba(0,0,0,0.55));
-    transition: 0.1s;
+    filter: drop-shadow(1px 1px 30px rgba(0,0,0,0.6));
+    -webkit-filter: drop-shadow(1px 1px 28px rgba(0,0,0,0.5));
+    transition: 0.05s;
 }
 
 .tecnologia h3 {

@@ -5,8 +5,8 @@ body {
 
 #main-index {
     height: 100vh;
-    background-color: rgba(255,255,255,0.3);
-    backdrop-filter: saturate(180%) blur(14px);
+    background-color: rgba(255,255,255,0.8);
+    backdrop-filter: saturate(400%) blur(12px);
     -webkit-backdrop-filter: saturate(180%) blur(14px);
 }
 
