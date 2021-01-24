@@ -20,6 +20,38 @@ function closeDetails() {
 }
 
 
+
+
+
+function copyContact(id_contact) { // TEST WAS NOT SUCCESSFUL
+
+    switch (id_contact) {
+        case 0:
+            var emailLink = "felipe.dias.azevedo@hotmail.com";
+            break;
+        case 1:
+            var emailLink = "+5511950277693";
+            break;
+        default:
+            var emailLink = "linkedin.com/in/felipe-azevedo-4b71171a8";
+            break;
+    }
+
+    var range = document.createRange();
+    range.selectNode(emailLink);
+    window.getSelection().addRange(range);
+
+    try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Copy email command was ' + msg);
+    } catch(err) {
+        console.log('Oops, unable to copy');
+    }
+    window.getSelection().removeAllRanges();
+}
+
+
 function changeScreen() {
     // var bodyProp = document.getElementsByTagName("BODY")[0];
     // bodyProp.innerHTML = ""
@@ -32,16 +64,22 @@ function loadProjects() {
         "calculator-java.png",
         "website-game.png",
         "web-crosswords.png",
+        "nlw3-project.jpg",
+        "ftop.png"
     ];
     var description_proj = [
         "Calculadora em Java",
         "Site-Jogo StarWars",
         "Palavras Cruzadas Web",
+        "NLW #03 Happy",
+        "ftop"
     ];
     var code_proj = [
         "https://github.com/felipe-dias-azevedo/calculator-java",
         "https://github.com/felipe-dias-azevedo/SiteJogo-StarWars-AUltimaEsperancaJedi",
         "https://github.com/felipe-dias-azevedo/Jogo-PalavraCruzada-COMPUTACAO",
+        "https://github.com/felipe-dias-azevedo/nlw-03-happy",
+        "https://github.com/felipe-dias-azevedo/ftop"
     ];
     var out_projects = "";
 
@@ -93,6 +131,8 @@ function getProjectDetails(id_project, title_project) {
         "Calculadora Simples em java",
         "Site-Jogo StarWars de texto",
         "Palavras Cruzadas Web sobre Arquitetura de Computadores",
+        "Uma plataforma para cadastro de orfanatos devido a sua criação próxima ao dia das crianças (12/10) onde altruistas possam visitar crianças orfãs a fim de tornar o dia delas melhores.<br>Aplicação desenvolvida durante a semana omnistack NextLevelWeek de terceira edição pela Rocketseat.",
+        "Simples Gerenciador de recursos do Sistema Operacional/Hardware feito em Python"
     ];
 
     var projectDetailsLocale = getNeededLocale(1).title;
@@ -144,9 +184,9 @@ function loadTechnologies() {
     ];
     var insertTechs = "";
 
-    function defineTech(description, img_source) {
+    function defineTech(description, img_source, id_class) {
         var technology = `<div class="tecnologia">
-                            <div class="cartao">
+                            <div class="cartao cartao-cor${id_class}">
                                 <figure>
                                     <img src="${img_source}" alt="${description}">
                                 </figure>
@@ -158,7 +198,7 @@ function loadTechnologies() {
 
     for (let i = 0; i < source_tech.length; i++) {
         var path_source_tech = path_to_source_tech + source_tech[i];
-        insertTechs += defineTech(description_tech[i], path_source_tech);
+        insertTechs += defineTech(description_tech[i], path_source_tech, parseInt(Math.random() * 4));
     }
     document.getElementById("main-tecnologias").innerHTML = insertTechs;
 }

@@ -5,9 +5,9 @@ body {
 
 #main-about {
     height: 100vh;
-    background-color: rgba(255,255,255,0.8);
-    backdrop-filter: saturate(400%) blur(12px);
-    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    background-color: rgba(255,255,255,0.9);
+    backdrop-filter: saturate(280%) blur(8px);
+    -webkit-backdrop-filter: saturate(500%) blur(10px);
 }
 
 .corpo-exibicao {

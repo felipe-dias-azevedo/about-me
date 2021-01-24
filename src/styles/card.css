@@ -28,9 +28,9 @@
     flex-direction: column;
 
     border: 2px solid #c4c4c4;
-    background-color: rgba(255, 255, 255, 0.85);
-    backdrop-filter: saturate(500%) blur(8px);
-    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    background-color: rgba(255, 255, 255, 0.96);
+    backdrop-filter: saturate(100%) blur(2px);
+    -webkit-backdrop-filter: saturate(1200%) blur(6px);
 
     height: 96.95%;
     width: 100%;
@@ -51,7 +51,7 @@
     object-position: left bottom; */
     border-radius: 16px;
     border: 2px grey solid;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
     transition: 0.3s;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .projeto:hover .cartao figure img {
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
 }
 
 .descricao-projeto {
@@ -102,7 +102,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px grey solid;
+    border: 3px grey solid;
     border-radius: 50%;
     margin: 0;
     padding: 0.05em;
@@ -110,7 +110,7 @@
     background: #fcfcfc;
     outline: none;
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.45);
     transition: 0.1s;
 }
 
@@ -122,8 +122,8 @@
 .descricao-projeto section:hover,
 .descricao-projeto section:focus {
     background-color: #fff;
-    border: 2px solid #c4c4c4;
-    box-shadow: 0 0 10px rgba(188, 188, 188, 0.9);
+    border: 3px solid #c4c4c4;
+    box-shadow: 0 0 4px rgba(188, 188, 188, 0.95);
 }
 
 
@@ -152,12 +152,16 @@
     align-items: center;
     border-radius: 50%;
     /* background-color: rgba(255, 255, 255, 0.4); */
-    border: 3px solid #232323;
-    background-color: rgba(158, 158, 158, 0.6);
-    backdrop-filter: saturate(500%) blur(1px);
-    -webkit-backdrop-filter: saturate(300%) blur(1px);
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-    transition: 0.05s;
+    border: 3px solid rgb(63, 74, 95);
+    /* background-color: rgba(158, 158, 158, 0.6); */
+    /* background: rgb(70,105,177);
+    background: linear-gradient(300deg, rgba(70,105,177,1) 0%, rgba(107,142,184,1) 100%); */
+    /* background: rgb(130,161,224);
+    background: linear-gradient(300deg, rgba(130,161,224,1) 0%, rgba(200,213,230,1) 100%); */
+    /* backdrop-filter: saturate(500%) blur(1px);
+    -webkit-backdrop-filter: saturate(300%) blur(1px); */
+    box-shadow: 1px 0 4px rgba(0, 0, 0, 0.5);
+    transition: 0.1s;
 }
 
 .tecnologia figure {
@@ -171,15 +175,15 @@
 .tecnologia .cartao:hover,
 .tecnologia .cartao:focus {
     background-color: rgba(245, 245, 245, 0.8);
-    border: 3px solid #c3c3c3;
-    box-shadow: 0 0 6px rgba(188, 188, 188, 1);
+    border-color: rgb(194, 205, 214);
+    box-shadow: 1px 0 4px rgba(188, 188, 188, 0.9);
 }
 
-.tecnologia .cartao:hover img,
+/* .tecnologia .cartao:hover img,
 .tecnologia .cartao:focus img {
     filter: drop-shadow(1px 1px 1.2em rgba(0,0,0,0.3));
     -webkit-filter: drop-shadow(1px 1px 1.2em rgba(0,0,0,0.3));
-}
+} */
 
 .tecnologia figure img {
     display: flex;
@@ -187,12 +191,59 @@
     justify-content: center;
     height: 66%;
     width: 66%;
-    filter: drop-shadow(1px 1px 30px rgba(0,0,0,0.6));
-    -webkit-filter: drop-shadow(1px 1px 28px rgba(0,0,0,0.5));
-    transition: 0.05s;
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
+    /* -webkit-filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.1)); */
+    transition: 0.1s;
 }
 
 .tecnologia h3 {
     font-size: 1.1em;
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+
+/* CARTOES-DIFERENTES */
+
+.tecnologia .cartao-cor0 {
+    background: rgb(202,218,250);
+    background: linear-gradient(315deg, rgba(202,218,250,1) 0%, rgba(236,236,236,1) 100%);  
+}
+
+.tecnologia .cartao-cor0:hover,
+.tecnologia .cartao-cor0:focus {
+    background: rgb(251,252,255);
+    background: linear-gradient(315deg, rgba(251,252,255,1) 0%, rgb(234, 241, 255) 100%);
+}
+
+.tecnologia .cartao-cor1 {
+    background: rgb(202,218,250);
+    background: linear-gradient(45deg, rgba(202,218,250,1) 0%, rgba(236,236,236,1) 100%);  
+}
+
+.tecnologia .cartao-cor1:hover,
+.tecnologia .cartao-cor1:focus {
+    background: rgb(251,252,255);
+    background: linear-gradient(45deg, rgba(251,252,255,1) 0%, rgb(234, 241, 255) 100%);
+}
+
+.tecnologia .cartao-cor2 {
+    background: rgb(202,218,250);
+    background: linear-gradient(135deg, rgba(202,218,250,1) 0%, rgba(236,236,236,1) 100%);  
+}
+
+.tecnologia .cartao-cor2:hover,
+.tecnologia .cartao-cor2:focus {
+    background: rgb(251,252,255);
+    background: linear-gradient(135deg, rgba(251,252,255,1) 0%, rgb(234, 241, 255) 100%);
+}
+
+.tecnologia .cartao-cor3 {
+    background: rgb(202,218,250);
+    background: linear-gradient(225deg, rgba(202,218,250,1) 0%, rgba(236,236,236,1) 100%);  
+}
+
+.tecnologia .cartao-cor3:hover,
+.tecnologia .cartao-cor3:focus {
+    background: rgb(251,252,255);
+    background: linear-gradient(225deg, rgba(251,252,255,1) 0%, rgb(234, 241, 255) 100%);
 }

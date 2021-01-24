@@ -15,6 +15,7 @@
     <title>Sobre o Felipe</title>
     <script src="../scripts.js"></script>
     <script src="../loadLocales.js"></script>
+    <script src="../detectMobile.js"></script>
 </head>
 <body>
     <div id="modal-details" class="animate">
@@ -37,19 +38,19 @@
         <div id="main-modal">
             <h1 id="contactTitle">Meios de contato</h1>
             <div class="media">
-                <a href="">
+                <a onclick="copyContact(1)" href="mailto:felipe.dias.azevedo@hotmail.com">
                     <section>
                         <img src="../images/email.svg" alt="E-mail">
                     </section>
                     <h3>E-mail</h3>
                 </a>
-                <a href="https://www.linkedin.com/in/felipe-azevedo-4b71171a8/" target="_blank">
+                <a onclick="copyContact()" href="https://www.linkedin.com/in/felipe-azevedo-4b71171a8/" target="_blank">
                     <section>
                         <img src="../images/linkedin.svg" alt="Linkedin">
                     </section>
                     <h3>Linkedin</h3>
                 </a>
-                <a href="">
+                <a onclick="copyContact(0)" href="tel:+5511950277693">
                     <section>
                         <img src="../images/phone.svg" alt="Telefone">
                     </section>

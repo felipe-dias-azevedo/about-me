@@ -9,6 +9,7 @@
         height: 4em;
         width: 4em;
     }
+    
 }
 
 /* até 550px de largura */
@@ -149,6 +150,8 @@
     }
 }
 
+
+
 /* até 820px de altura */
 @media (max-height: 650px) {
     .head {
@@ -171,5 +174,31 @@
 
     .corpo {
         padding-top: 1.2em;
+    }
+
+    /* MODAL-DETAILS */
+
+    #main-modal-details {
+        height: 75%;
+        width: 85%;
+    }
+
+    .modal-details-box {
+        height: 75%;
+        width: 75%;
+        margin-top: 1.4em;
+    }
+
+    .modal-details-box p {
+        font-size: 0.8em;
+    }
+
+    #modal-details-title {
+        line-height: 1.2em;
+    }
+
+    .modal-title {
+        font-size: 0.85em;
+        font-weight: 300;
     }
 }
