@@ -150,6 +150,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     border-radius: 50%;
     /* background-color: rgba(255, 255, 255, 0.4); */
     border: 3px solid rgb(63, 74, 95);
@@ -161,6 +162,7 @@
     /* backdrop-filter: saturate(500%) blur(1px);
     -webkit-backdrop-filter: saturate(300%) blur(1px); */
     box-shadow: 1px 0 4px rgba(0, 0, 0, 0.5);
+    outline: 0;
     transition: 0.1s;
 }
 
@@ -199,6 +201,23 @@
 .tecnologia h3 {
     font-size: 1.1em;
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.tecnologia .cartao-back {
+    background-color: #232323;
+    height: 6%;
+    width: 66%;
+    margin: 3%;
+    border-radius: 16px;
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
+}
+
+.tecnologia .cartao-back-text {
+    font-size: 0.7em;
+    margin-top: 4px;
+    line-height: 0.7em;
+    font-weight: 200;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
 }
 
 

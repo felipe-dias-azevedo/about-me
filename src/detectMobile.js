@@ -7,6 +7,15 @@ function detectMobile() {
                 (navigator.userAgent||navigator.vendor||window.opera);
         return check;
     };
-    console.log(isMobile.check == true ? "Mobile" : "Desktop");
+    console.log(isMobile.check == true ? "Mobile View" : "Desktop View");
     return isMobile;
+}
+
+function useMobile() {
+    isMobile = detectMobile();
+    if (isMobile) {
+        // IF DEVICE IS MOBILE
+    } else {
+        // IF NOT MOBILE
+    }
 }

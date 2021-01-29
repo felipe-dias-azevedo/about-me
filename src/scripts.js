@@ -184,13 +184,13 @@ function loadTechnologies() {
     ];
     var insertTechs = "";
 
-    function defineTech(description, img_source, id_class) {
+    function defineTech(id_tech, description, img_source, id_class) {
         var technology = `<div class="tecnologia">
-                            <div class="cartao cartao-cor${id_class}">
-                                <figure>
+                            <button id="tech${id_tech}" onclick="getTechDetails(${id_tech},'${img_source}','${description}')" class="cartao cartao-cor${id_class}">
+                                <figure id="figure_tech${id_tech}">
                                     <img src="${img_source}" alt="${description}">
                                 </figure>
-                            </div>
+                            </button>
                             <h3>${description}</h3>
                         </div>`;
         return technology;
@@ -198,9 +198,48 @@ function loadTechnologies() {
 
     for (let i = 0; i < source_tech.length; i++) {
         var path_source_tech = path_to_source_tech + source_tech[i];
-        insertTechs += defineTech(description_tech[i], path_source_tech, parseInt(Math.random() * 4));
+        insertTechs += defineTech(i, description_tech[i], path_source_tech, parseInt(Math.random() * 4));
     }
     document.getElementById("main-tecnologias").innerHTML = insertTechs;
+}
+
+
+function getTechDetails(id_tech, source_tech, desc_tech) {
+    var level_tech = [3,3,2,2,3,3,2,1,1,1,1,1,3,3,2,3]
+
+    var figure_tech = document.getElementById(`figure_tech${id_tech}`);
+    var is_showing_tech = document.getElementById(`tech${id_tech}`).contains(figure_tech);
+
+    if (!is_showing_tech) {
+        document.getElementById(`tech${id_tech}`).innerHTML = 
+        `<figure id="figure_tech${id_tech}">
+            <img src="${source_tech}" alt="${desc_tech}">
+        </figure>`;
+    } else {
+        output_level = "";
+        for (let i = 0; i < level_tech[id_tech]; i++) {
+            output_level += `<div class="cartao-back"></div>`;
+        }
+        for (let i = 0; i < 3 - level_tech[id_tech]; i++) {
+            output_level += `<div class="cartao-back" style="background-color: #d2d2d2;"></div>`;
+        }
+        level = level_tech[id_tech]
+        switch (level) {
+            case 1:
+                output_level += `<p class="cartao-back-text">Básico</p>`;
+                break;
+            case 2:
+                output_level += `<p class="cartao-back-text">Intermediário</p>`;
+                break;
+            case 3:
+                output_level += `<p class="cartao-back-text">Avançado</p>`;
+                break;
+            default:
+                output_level += `<p class="cartao-back-text">OK</p>`;
+                break;
+        }
+        document.getElementById(`tech${id_tech}`).innerHTML = output_level;
+    }
 }
 
 
