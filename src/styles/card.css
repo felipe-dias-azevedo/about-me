@@ -55,7 +55,11 @@
     transition: 0.3s;
 }
 
-.projeto:hover .cartao-traseira {
+/* .projeto:hover .cartao-traseira {
+    opacity: 1;
+} */
+
+.projeto-desktop:hover .cartao-traseira {
     opacity: 1;
 }
 

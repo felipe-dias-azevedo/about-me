@@ -7,8 +7,8 @@
     width: 100vw;
     z-index: 1;
     background-color: rgba(15, 15, 15, 0.98);
-    backdrop-filter: saturate(75%) blur(2px);
-    -webkit-backdrop-filter: saturate(70%) blur(8px);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(6px);
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
     align-items: center;
     justify-content: center;
